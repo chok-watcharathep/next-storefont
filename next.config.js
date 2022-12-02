@@ -47,6 +47,7 @@ const nextConfig = {
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
+    maximumFileSizeToCacheInBytes: 5000000,
   },
   images: {
     domains: (process.env.IMAGE_DOMAINS ?? '').split(',').map((s) => s.trim()),
